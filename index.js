@@ -7,7 +7,7 @@ let app = express();
 app.use(cors());
 app.use(express.json());
 
-const { DATABASE_URL } = import.meta.env.VITE_DATABASE_URL;
+const { DATABASE_URL } = process.env.VITE_DATABASE_URL;
 
 const pool = new Pool({
     connectionString: DATABASE_URL,
